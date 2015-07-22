@@ -7,18 +7,16 @@
     <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
     <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <!-- Wide card with share menu button -->
+    <!-- Square card -->
     <style>
-      .demo-card-wide.mdl-card {
-        width: 512px;
+      .demo-card-square.mdl-card {
+        width: 280px;
+        height: 320px;
       }
-      .demo-card-wide > .mdl-card__title {
+      .demo-card-square > .mdl-card__title {
         color: #fff;
-        height: 176px;
-        background: url('../assets/demos/welcome_card.jpg') center / cover;
-      }
-      .demo-card-wide > .mdl-card__menu {
-        color: #fff;
+        background:
+          url('../assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
       }
     </style>
   </head>
@@ -52,30 +50,46 @@
       </div>
       <main class="mdl-layout__content">
         <div class="page-content">
+          <!-- Banner -->
           <div class="demo-grid-1 mdl-grid">
-            <!-- First cell -->
-            <div class="mdl-cell mdl-cell--1-col"></div>
-            <!-- Second cell -->
-            <div class="mdl-cell mdl-cell--5-col">
-              <h2>Lego Product Title</h2>
-              <!-- image-->
-              <div class="mdl-card mdl-shadow--2dp demo-card-wide"></div>
+            <div class="mdl-cell mdl-cell--12-col">
+              <h2 style="text-align:center">Contact Us</h2>
             </div>
-            <!-- Third cell -->
-            <div class="mdl-cell mdl-cell--5-col">
-              <p style="margin-top: 100px;">
-                <h3>$79.99</h3>
-              </p>
-              <p>Experience the iconic Ferrari F40 firsthand, with sleek aerodynamic lines, vented, hinged rear hatch, opening doors and
-                detailed interior. Experience the iconic Ferrari F40 firsthand, with sleek aerodynamic lines, vented, hinged rear hatch,
-                opening doors and detailed interior. Experience the iconic Ferrari F40 firsthand, with sleek aerodynamic lines, vented, hinged
-                rear hatch, opening doors and detailed interior. Experience the iconic Ferrari F40 firsthand, with sleek aerodynamic lines,
-                vented, hinged rear hatch, opening doors and detailed interior.</p>
-              <!-- Button -->
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" style="float:right">Add to Cart</button>
+          </div>
+          <!-- Grid 1 -->
+          <div class="demo-grid-1 mdl-grid">
+            <div class="mdl-cell mdl-cell--2-col"></div>
+            <div class="mdl-cell mdl-cell--8-col">
+              <!-- Content -->
+              <p style="text-align:center">WE'd love to hear from you. Please drop us a line about the store!</p>
+              <!-- Simple Textfield -->
+              <form action="#" style="text-align:center">
+                <div class="mdl-textfield mdl-js-textfield textfield-demo">
+                  <input class="mdl-textfield__input" type="text" id="sample1" />
+                  <label class="mdl-textfield__label" for="sample1">Your Name...</label>
+                </div>
+                <br />
+                <div class="mdl-textfield mdl-js-textfield textfield-demo">
+                  <input class="mdl-textfield__input" type="text" id="sample1" />
+                  <label class="mdl-textfield__label" for="sample1">Your email address...</label>
+                </div>
+                <br />
+                <div class="mdl-textfield mdl-js-textfield textfield-demo">
+                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" />
+                  <label class="mdl-textfield__label" for="sample2">Your phone number...</label>
+                  <span class="mdl-textfield__error">Input is not a number!</span>
+                </div>
+                <br />
+                <div class="mdl-textfield mdl-js-textfield textfield-demo">
+                  <textarea class="mdl-textfield__input" type="text" rows="5" id="sample5"></textarea>
+                  <label class="mdl-textfield__label" for="sample5">Your Message...</label>
+                </div>
+                <br />
+                <!-- Button -->
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">Submit</button>
+              </form>
             </div>
-            <!-- Fourth cell -->
-            <div class="mdl-cell mdl-cell--1-col"></div>
+            <div class="mdl-cell mdl-cell--2-col"></div>
           </div>
         </div>
         <!-- footer -->
@@ -97,4 +111,5 @@
       </main>
     </div>
   </body>
+
 </html>
