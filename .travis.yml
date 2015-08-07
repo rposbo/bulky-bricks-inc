@@ -3,3 +3,5 @@ node_js:
   - "0.12.7"
 before_script:
   - npm install grunt-cli -g
+script:
+  - echo "Build Complete"
