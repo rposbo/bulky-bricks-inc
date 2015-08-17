@@ -1,0 +1,112 @@
+/**
+General
+ */
+.demo-card-square.mdl-card {
+	width: 280px;
+	height: 320px;
+}
+.demo-card-square > .mdl-card__title {
+	color: #fff;
+}
+
+/**
+Index page
+ */
+.demo-card-square.mdl-card.home_background{
+	width:100%;
+	height:200px;
+}
+
+ .home_background{
+ 	width: 0;
+ 	
+ 	background-color:#46B6AC;
+ 	
+ 	background-image: url('/images/background.jpg');
+ }
+
+ .home_welcome_text{
+ 	text-align:center;
+ 	color: black;
+ 	text-shadow: 2px 2px #D0CECE;
+ }
+
+.home_tagline{
+	text-align:center;
+	color: black;
+	text-shadow: 2px 2px #D0CECE;
+	margin-top: -20px;
+}
+
+.home_star_wars{
+	background: url('/images/starwars.png');
+	background-repeat: no-repeat;
+	text-align: center;
+	background-position: center;
+}
+
+.home_city{
+	background: url('/images/city.png');
+	background-repeat: no-repeat;
+	text-align: center;
+	background-position: center;
+}
+
+.home_duplo{
+	background: url('/images/duplo.png');
+	background-repeat: no-repeat;
+	text-align: center;
+	background-position: center;
+}
+
+.home_pirates{
+	background: url('/images/pirates.png');
+	background-repeat: no-repeat;
+	text-align: center;
+	background-position: center;
+}
+
+.demo-card-square.mdl-card.home_bricks_pattern{
+	width:100%;
+	height:200px;
+}
+
+
+.home_bricks_pattern{
+	background-color:#46B6AC;
+	background-image: url('/images/lego-bricks-pattern.jpg');
+}
+
+.sale_text{
+	text-align:center;
+	color: black;
+	text-shadow: 2px 2px #D0CECE;
+	margin-top: 60px;
+}
+
+/**
+About page
+ */
+
+.grid_center{
+	text-align:center
+}
+
+.about_background{
+	height:200px;
+	background-color:#46B6AC;
+	width:100%;
+	background-image: url('/images/background.jpg');
+}
+
+.about_text{
+	text-align:center;
+	color: black;
+	text-shadow: 2px 2px #D0CECE;
+	margin-top: 60px;
+}
+
+.logo_size{
+	width: 180px;
+}
+
