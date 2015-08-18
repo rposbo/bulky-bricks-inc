@@ -4,28 +4,20 @@
   <head>
     <meta charset="UTF-8">
     <title>Bulky Bricks Page</title>
-    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
-    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+    <link rel="stylesheet" href="css/material-design.min.css">
+    <link rel="stylesheet" href="css/site.css">
+    <script src="scripts/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <!-- Square card -->
-    <style>
-      .demo-card-square.mdl-card {
-        width: 280px;
-        height: 320px;
-      }
-      .demo-card-square > .mdl-card__title {
-        color: #fff;
-      }
-    </style>
   </head>
-  
   <body>
     <!-- Always shows a header, even in smaller screens. -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
           <!-- Title -->
-          <span class="mdl-layout-title"><img src="images/logo.svg" style="width: 180px;"></span>
+          <span class="mdl-layout-title">
+            <img src="images/logo.svg" class="logo_size">
+          </span>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation. We hide it in small screens. -->
@@ -49,10 +41,10 @@
       <main class="mdl-layout__content">
         <div class="page-content">
           <!-- Banner -->
-          <div class="demo-grid-1 mdl-grid" style="text-align:center">
+          <div class="demo-grid-1 mdl-grid grid_center">
             <div class="mdl-cell mdl-cell--12-col">
-              <div class="mdl-card mdl-shadow--2dp demo-card-square" style="height:200px;background-color:#46B6AC;width:100%;background-image: url('images/lego-bricks-pattern.jpg');">
-               <h1 style="text-align:center;color: black;text-shadow: 2px 2px #D0CECE;margin-top: 60px;">All Themes</h1>
+              <div class="mdl-card mdl-shadow--2dp demo-card-square products_brick">
+               <h1 class="all_themes_text">All Themes</h1>
               </div>
             </div>
           </div>
@@ -60,7 +52,7 @@
           <div class="demo-grid-1 mdl-grid">
             <div class="mdl-cell mdl-cell--3-col">
               <div class="mdl-card mdl-shadow--2dp demo-card-square">
-                <div class="mdl-card__title mdl-card--expand" style="background: url('images/ninjago.png');background-repeat: no-repeat;text-align: center;background-position: center;">
+                <div class="mdl-card__title mdl-card--expand products_ninjago">
                   <h2 class="mdl-card__title-text">Star Wars</h2>
                 </div>
                 <div class="mdl-card__actions mdl-card--border">
@@ -70,7 +62,7 @@
             </div>
             <div class="mdl-cell mdl-cell--3-col">
               <div class="mdl-card mdl-shadow--2dp demo-card-square">
-                <div class="mdl-card__title mdl-card--expand" style="background: url('images/turtles.png');background-repeat: no-repeat;text-align: center;background-position: center;">
+                <div class="mdl-card__title mdl-card--expand products_turtles">
                   <h2 class="mdl-card__title-text">City</h2>
                 </div>
                 <div class="mdl-card__actions mdl-card--border">
@@ -80,7 +72,7 @@
             </div>
             <div class="mdl-cell mdl-cell--3-col">
               <div class="mdl-card mdl-shadow--2dp demo-card-square">
-                <div class="mdl-card__title mdl-card--expand" style="background: url('images/simpsons.png');background-repeat: no-repeat;text-align: center;background-position: center;">
+                <div class="mdl-card__title mdl-card--expand products_simpsons">
                   <h2 class="mdl-card__title-text">Duplo</h2>
                 </div>
                 <div class="mdl-card__actions mdl-card--border">
@@ -90,7 +82,7 @@
             </div>
             <div class="mdl-cell mdl-cell--3-col">
               <div class="mdl-card mdl-shadow--2dp demo-card-square">
-                <div class="mdl-card__title mdl-card--expand" style="background: url('images/rings.png');background-repeat: no-repeat;text-align: center;background-position: center;">
+                <div class="mdl-card__title mdl-card--expand products_rings">
                   <h2 class="mdl-card__title-text">Pirates</h2>
                 </div>
                 <div class="mdl-card__actions mdl-card--border">
@@ -103,7 +95,7 @@
           <div class="demo-grid-1 mdl-grid">
             <div class="mdl-cell mdl-cell--3-col">
               <div class="mdl-card mdl-shadow--2dp demo-card-square">
-                <div class="mdl-card__title mdl-card--expand" style="background: url('images/starwars.png');background-repeat: no-repeat;text-align: center;background-position: center;">
+                <div class="mdl-card__title mdl-card--expand products_star_wars">
                   <h2 class="mdl-card__title-text">Star Wars</h2>
                 </div>
                 <div class="mdl-card__actions mdl-card--border">
@@ -113,7 +105,7 @@
             </div>
             <div class="mdl-cell mdl-cell--3-col">
               <div class="mdl-card mdl-shadow--2dp demo-card-square">
-                <div class="mdl-card__title mdl-card--expand" style="background: url('images/city.png');background-repeat: no-repeat;text-align: center;background-position: center;">
+                <div class="mdl-card__title mdl-card--expand products_city">
                   <h2 class="mdl-card__title-text">City</h2>
                 </div>
                 <div class="mdl-card__actions mdl-card--border">
@@ -123,7 +115,7 @@
             </div>
             <div class="mdl-cell mdl-cell--3-col">
               <div class="mdl-card mdl-shadow--2dp demo-card-square">
-                <div class="mdl-card__title mdl-card--expand" style="background: url('images/duplo.png');background-repeat: no-repeat;text-align: center;background-position: center;">
+                <div class="mdl-card__title mdl-card--expand products_duplo">
                   <h2 class="mdl-card__title-text">Duplo</h2>
                 </div>
                 <div class="mdl-card__actions mdl-card--border">
@@ -133,7 +125,7 @@
             </div>
             <div class="mdl-cell mdl-cell--3-col">
               <div class="mdl-card mdl-shadow--2dp demo-card-square">
-                <div class="mdl-card__title mdl-card--expand" style="background: url('images/pirates.png');background-repeat: no-repeat;text-align: center;background-position: center;">
+                <div class="mdl-card__title mdl-card--expand products_pirates">
                   <h2 class="mdl-card__title-text">Pirates</h2>
                 </div>
                 <div class="mdl-card__actions mdl-card--border">
@@ -146,7 +138,7 @@
           <div class="demo-grid-1 mdl-grid">
             <div class="mdl-cell mdl-cell--3-col">
               <div class="mdl-card mdl-shadow--2dp demo-card-square">
-                <div class="mdl-card__title mdl-card--expand" style="background: url('images/lizard.png');background-size:248px 235px; background-repeat: no-repeat;text-align: center;background-position: center;">
+                <div class="mdl-card__title mdl-card--expand products_lizzard">
                   <h2 class="mdl-card__title-text">Lizards</h2>
                 </div>
                 <div class="mdl-card__actions mdl-card--border">
@@ -156,7 +148,7 @@
             </div>
             <div class="mdl-cell mdl-cell--3-col">
               <div class="mdl-card mdl-shadow--2dp demo-card-square">
-                <div class="mdl-card__title mdl-card--expand" style="background: url('images/indy-jones.png');background-size:248px 235px;background-repeat: no-repeat;text-align: center;background-position: center;">
+                <div class="mdl-card__title mdl-card--expand products_indy_jones">
                   <h2 class="mdl-card__title-text">Indana Jones</h2>
                 </div>
                 <div class="mdl-card__actions mdl-card--border">
@@ -166,7 +158,7 @@
             </div>
             <div class="mdl-cell mdl-cell--3-col">
               <div class="mdl-card mdl-shadow--2dp demo-card-square">
-                <div class="mdl-card__title mdl-card--expand" style="background: url('images/red-pilot.png');background-size:248px 235px;background-repeat: no-repeat;text-align: center;background-position: center;">
+                <div class="mdl-card__title mdl-card--expand products_red_pilot">
                   <h2 class="mdl-card__title-text">Pilots</h2>
                 </div>
                 <div class="mdl-card__actions mdl-card--border">
@@ -176,7 +168,7 @@
             </div>
             <div class="mdl-cell mdl-cell--3-col">
               <div class="mdl-card mdl-shadow--2dp demo-card-square">
-                <div class="mdl-card__title mdl-card--expand" style="background: url('images/captain-america.png');background-size:248px 235px;background-repeat: no-repeat;text-align: center;background-position: center;">
+                <div class="mdl-card__title mdl-card--expand products_captain_america">
                   <h2 class="mdl-card__title-text">Captain America</h2>
                 </div>
                 <div class="mdl-card__actions mdl-card--border">

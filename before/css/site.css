@@ -1,4 +1,19 @@
 /**
+
+ * Bulky Bricks Styling
+
+ * @version v1.0.0
+
+ * @license Apache-2
+
+ * @copyright 2015 Bulky Bricks, Inc.
+
+ * @link https://github.com/rposbo/bulky-bricks-inc
+
+ */
+
+
+/**
 General
  */
 .demo-card-square.mdl-card {
@@ -9,9 +24,15 @@ General
 	color: #fff;
 }
 
+ .center_text{
+	text-align:center
+ }
+
+
 /**
 Index page
  */
+
 .demo-card-square.mdl-card.home_background{
 	width:100%;
 	height:200px;
@@ -84,6 +105,151 @@ Index page
 	margin-top: 60px;
 }
 
+
+
+/**
+Products page
+ */
+
+
+
+.demo-card-square.mdl-card.products_brick{
+	width:100%;
+	height:200px;
+}
+
+
+.products_brick{
+	background-color:#46B6AC;
+	background-image: url('/images/lego-bricks-pattern.jpg');
+}
+
+.all_themes_text{
+	text-align:center;
+	color: black;
+	text-shadow: 2px 2px #D0CECE;
+	margin-top: 60px;
+}
+
+.products_ninjago{
+	background: url('/images/ninjago.png');
+	background-repeat: no-repeat;
+	text-align: center;
+	background-position: center;
+}
+
+.products_turtles{
+	background: url('/images/turtles.png');
+	background-repeat: no-repeat;
+	text-align: center;
+	background-position: center;
+}
+
+.products_simpsons{
+	background: url('/images/simpsons.png');
+	background-repeat: no-repeat;
+	text-align: center;
+	background-position: center;
+}
+
+.products_rings{
+	background: url('/images/rings.png');
+	background-repeat: no-repeat;
+	text-align: center;
+	background-position: center;
+}
+
+.products_star_wars{
+	background: url('/images/starwars.png');
+	background-repeat: no-repeat;
+	text-align: center;
+	background-position: center;
+}
+
+.products_city{
+	background: url('/images/city.png');
+	background-repeat: no-repeat;
+	text-align: center;
+	background-position: center;
+}
+
+.products_duplo{
+background: url('/images/duplo.png');
+background-repeat: no-repeat;
+text-align: center;
+background-position: center;
+}
+
+.products_pirates{
+	background: url('/images/pirates.png');
+	background-repeat: no-repeat;
+	text-align: center;
+	background-position: center;
+}
+
+.products_lizzard{
+	background: url('/images/lizard.png');
+	background-size:248px 235px;
+	background-repeat: no-repeat;
+	text-align: center;
+	background-position: center;
+}
+
+.products_indy_jones{
+	background: url('/images/indy-jones.png');
+	background-size:248px 235px;
+	background-repeat: no-repeat;
+	text-align: center;
+	background-position: center;
+}
+
+.products_red_pilot{
+	background: url('/images/red-pilot.png');
+	background-size:248px 235px;
+	background-repeat: no-repeat;
+	text-align: center;
+	background-position: center;
+}
+
+.products_captain_america{
+	background: url('/images/captain-america.png');
+	background-size:248px 235px;
+	background-repeat: no-repeat;
+	text-align: center;
+	background-position: center;
+}
+
+
+
+/**
+Product page
+ */
+
+
+
+.demo-card-wide.mdl-card {
+  width: 500px; 
+  height: 500px;
+}
+
+
+.product_tie_fighter{
+	background: url('/images/tie-fighter-large.jpg');
+	background-repeat: no-repeat;
+	text-align: center;
+	background-position: center;
+}
+
+.product_paragraph{
+	margin-top: 100px;
+}
+
+.product_add_cart{
+	float:right;
+}
+
+
+
 /**
 About page
  */
@@ -92,10 +258,13 @@ About page
 	text-align:center
 }
 
-.about_background{
-	height:200px;
-	background-color:#46B6AC;
+.demo-card-square.mdl-card.about_background{
 	width:100%;
+	height:200px;
+}
+
+.about_background{
+	background-color:#46B6AC;
 	background-image: url('/images/background.jpg');
 }
 
@@ -109,4 +278,14 @@ About page
 .logo_size{
 	width: 180px;
 }
+
+
+
+
+/**
+Contact page
+ */
+
+
+
 
