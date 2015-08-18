@@ -4,8 +4,9 @@
   <head>
     <meta charset="UTF-8">
     <title>Bulky Bricks Home Page</title>
-    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.indigo-pink.min.css">
-    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.0/material.min.js"></script>
+    <link rel="stylesheet" href="css/material-design.min.css">
+    <link rel="stylesheet" href="css/site.css">
+    <script src="scripts/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   
@@ -15,7 +16,9 @@
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
           <!-- Logo -->
-          <span class="mdl-layout-title"><img src="images/logo.svg" style="width: 180px;"></span>
+          <span class="mdl-layout-title">
+          <img src="images/logo.svg" class="logo_size">
+          </span>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
           <!-- Navigation. We hide it in small screens. -->
@@ -39,10 +42,10 @@
       <main class="mdl-layout__content">
         <div class="page-content">
           <!-- Banner -->
-          <div class="demo-grid-1 mdl-grid" style="text-align:center">
+          <div class="demo-grid-1 mdl-grid grid_center">
             <div class="mdl-cell mdl-cell--12-col">
-              <div class="mdl-card mdl-shadow--2dp demo-card-square" style="height:200px;background-color:#46B6AC;width:100%;background-image: url('images/background.jpg');">
-               <h1 style="text-align:center;color: black;text-shadow: 2px 2px #D0CECE;margin-top: 60px;">About Us</h1>
+              <div class="mdl-card mdl-shadow--2dp demo-card-square about_background">
+               <h1 class="about_text">About Us</h1>
               </div>
             </div>
           </div>
