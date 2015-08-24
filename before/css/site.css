@@ -40,9 +40,9 @@ Index page
 
  .home_background{
  	width: 0;
- 	
+
  	background-color:#46B6AC;
- 	
+
  	background-image: url('/images/background.jpg');
  }
 
@@ -228,7 +228,7 @@ Product page
 
 
 .demo-card-wide.mdl-card {
-  width: 500px; 
+  width: 500px;
   height: 500px;
 }
 
@@ -285,7 +285,3 @@ About page
 /**
 Contact page
  */
-
-
-
-
