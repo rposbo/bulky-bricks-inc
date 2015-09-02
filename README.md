@@ -27,3 +27,7 @@ An example unoptimised ecommerce website
 ### Packages
 * https://www.npmjs.com/package/grunt
 * https://www.npmjs.com/package/gulp
+
+![Bulky Bricks Site](https://raw.githubusercontent.com/rposbo/bulky-bricks-inc/master/bulky-bricks-site.jpg "Bulky Bricks") 
+
+
