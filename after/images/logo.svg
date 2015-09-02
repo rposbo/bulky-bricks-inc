@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="1320" height="162" viewBox="0 0 1320 162">
+  <defs>
+    <style>
+
+      .cls-2 {
+        font-size: 200px;
+      }
+
+      .cls-3 {
+        fill: #ffffff;
+        font-size: 200px;
+        font-family: "Blanka";
+      }
+    </style>
+  </defs>
+  <text class="cls-2" x="1px" y="161px"><tspan class="cls-3">Bulky Bricks</tspan></text>
+</svg>

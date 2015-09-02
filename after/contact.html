@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Bulky Bricks Contact Page</title>
+    <link rel="stylesheet" href="css/material-design.css">
+    <link rel="stylesheet" href="css/site.css">
+    <script src="scripts/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+
+  <body>
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <!-- Title -->
+          <span class="mdl-layout-title">
+            <img src="images/logo.svg" class="logo_size">
+          </span>
+          <!-- Add spacer, to align navigation to the right -->
+          <div class="mdl-layout-spacer"></div>
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
+            <a class="mdl-navigation__link" href="index.html">Home</a>
+            <a class="mdl-navigation__link" href="products.html">Products</a>
+            <a class="mdl-navigation__link" href="about.html">About Us</a>
+            <a class="mdl-navigation__link" href="contact.html">Contact Us</a>
+          </nav>
+        </div>
+      </header>
+      <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Bulky Bricks</span>
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="index.html">Home</a>
+          <a class="mdl-navigation__link" href="products.html">Products</a>
+          <a class="mdl-navigation__link" href="about.html">About Us</a>
+          <a class="mdl-navigation__link" href="contact.html">Contact Us</a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content">
+        <div class="page-content">
+          <!-- Banner -->
+          <div class="demo-grid-1 mdl-grid">
+            <div class="mdl-cell mdl-cell--12-col">
+              <h2 class="center_text">Contact Us</h2>
+            </div>
+          </div>
+          <!-- Grid 1 -->
+          <div class="demo-grid-1 mdl-grid">
+            <div class="mdl-cell mdl-cell--2-col"></div>
+            <div class="mdl-cell mdl-cell--8-col">
+              <!-- Content -->
+              <p class="center_text">We'd love to hear from you. Please drop us a line about the store!</p>
+              <!-- Simple Textfield -->
+              <form action="#" class="center_text">
+                <div class="mdl-textfield mdl-js-textfield textfield-demo">
+                  <input class="mdl-textfield__input" type="text" id="sample1" />
+                  <label class="mdl-textfield__label" for="sample1">Your Name...</label>
+                </div>
+                <br />
+                <div class="mdl-textfield mdl-js-textfield textfield-demo">
+                  <input class="mdl-textfield__input" type="text" id="sample1" />
+                  <label class="mdl-textfield__label" for="sample1">Your email address...</label>
+                </div>
+                <br />
+                <div class="mdl-textfield mdl-js-textfield textfield-demo">
+                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" />
+                  <label class="mdl-textfield__label" for="sample2">Your phone number...</label>
+                  <span class="mdl-textfield__error">Input is not a number!</span>
+                </div>
+                <br />
+                <div class="mdl-textfield mdl-js-textfield textfield-demo">
+                  <textarea class="mdl-textfield__input" type="text" rows="5" id="sample5"></textarea>
+                  <label class="mdl-textfield__label" for="sample5">Your Message...</label>
+                </div>
+                <br />
+                <!-- Button -->
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent">Submit</button>
+              </form>
+            </div>
+            <div class="mdl-cell mdl-cell--2-col"></div>
+          </div>
+        </div>
+        <!-- footer -->
+        <footer class="demo-footer mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+            <ul class="mdl-mini-footer--link-list">
+              <li>
+                <a href="#">Help</a>
+              </li>
+              <li>
+                <a href="#">Privacy and Terms</a>
+              </li>
+              <li>
+                <a href="#">User Agreement</a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </body>
+
+</html>

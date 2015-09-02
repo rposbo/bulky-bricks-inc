@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "grunt": "*",
+    "grunt-contrib-cssmin": "*"
+  },
+  "license": "MIT"
+}
+  
