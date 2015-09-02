@@ -1,9 +1,11 @@
 {
   "dependencies": {
     "grunt": "*",
+    "grunt-cli": "*",
     "grunt-contrib-cssmin": "*",
-    "grunt-contrib-imagemin": "*"
-  },
-  "license": "MIT"
+    "grunt-svgmin": "*"//,
+    // "grunt-contrib-imagemin": "*",
+    // "imagemin": "*",
+  }
 }
   
