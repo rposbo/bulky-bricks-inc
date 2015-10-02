@@ -3,9 +3,8 @@
     "grunt": "*",
     "grunt-cli": "*",
     "grunt-contrib-cssmin": "*",
-    "grunt-svgmin": "*"//,
-    // "grunt-contrib-imagemin": "*",
-    // "imagemin": "*",
+    "grunt-svgmin": "*",
+    "grunt-perfbudget": "*"
   }
 }
   
