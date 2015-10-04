@@ -10,16 +10,16 @@ module.exports = function(grunt) {
 			}
 		},
 		// Image minification
-		// imagemin: {
-		//   dynamic: {
-		//     files: [{
-		//       expand: true,
-		//       cwd: 'images/',
-		//       src: ['**/*.{png,jpg,gif}'],
-		//       dest: 'images/dist/'
-		//     }]
-		//   }
-		// },
+		imagemin: {
+		  dynamic: {
+		    files: [{
+		      expand: true,
+		      cwd: 'after/images/',
+		      src: ['**/*.{png,jpg,gif}'],
+		      dest: 'after/images/dist/'
+		    }]
+		  }
+		},
 		// Minify SVG
 		svgmin: {
 			options: {
@@ -54,10 +54,10 @@ module.exports = function(grunt) {
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	//grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-svgmin');
 	grunt.loadNpmTasks('grunt-pagespeed');
 
-	grunt.registerTask('default', ['pagespeed', 'cssmin', 'svgmin']);
+	grunt.registerTask('default', ['pagespeed', 'cssmin', 'svgmin', 'imagemin']);
 
 };
