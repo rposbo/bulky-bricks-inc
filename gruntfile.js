@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 		cssmin: {
 			target: {
 				files: [
-					{ src: ['css/material-design.css', 'css/site.css'], dest: 'css/result.min.css' }
+					{ src: ['after/css/material-design.css', 'after/css/site.css'], dest: 'after/css/result.min.css' }
 				]
 			}
 		},
@@ -33,7 +33,7 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				files: {
-					'images/dist/logo.svg': 'images/logo.svg'
+					'after/images/dist/logo.svg': 'after/images/logo.svg'
 				}
 			}
 		},
@@ -47,7 +47,7 @@ module.exports = function(grunt) {
 					url: "http://rposbo.github.io/bulky-bricks-inc/after/index.html",
 					locale: "en_GB",
 					strategy: "desktop",
-					threshold: 80
+					threshold: 60
 				}
 			}
 		}
