@@ -1,7 +1,7 @@
-# bulky-bricks-inc
-An example unoptimised ecommerce website
+# Bulky Bricks Inc. [![Build Status](https://travis-ci.org/deanhume/bulky-bricks-inc.svg?branch=master)](https://travis-ci.org/deanhume/bulky-bricks-inc)
+Bulky Bricks is a demo website that is used by @rposbo and @deanohume to showcase automating web performance using modern tools.
 
-# References 
+# References
 
 * Mozilla 2.2 seconds: https://blog.mozilla.org/metrics/2010/04/05/firefox-page-load-speed-%E2%80%93-part-ii/
 * whatdoesmysitecost.com
@@ -28,6 +28,4 @@ An example unoptimised ecommerce website
 * https://www.npmjs.com/package/grunt
 * https://www.npmjs.com/package/gulp
 
-![Bulky Bricks Site](https://raw.githubusercontent.com/rposbo/bulky-bricks-inc/master/bulky-bricks-site.jpg "Bulky Bricks") 
-
-
+![Bulky Bricks Site](https://raw.githubusercontent.com/rposbo/bulky-bricks-inc/master/bulky-bricks-site.jpg "Bulky Bricks")
