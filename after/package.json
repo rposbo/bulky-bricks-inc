@@ -5,6 +5,9 @@
     "grunt-contrib-cssmin": "*",
     "grunt-svgmin": "*",
     "grunt-perfbudget": "*"
+  },
+  "devDependencies": {
+    "grunt-contrib-htmlmin": "^0.5.0",
+    "grunt-contrib-uglify": "^0.9.2"
   }
 }
-  
