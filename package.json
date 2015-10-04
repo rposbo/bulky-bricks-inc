@@ -5,8 +5,5 @@
     "grunt-contrib-cssmin": "*",
     "grunt-svgmin": "*",
     "grunt-pagespeed": "*"
-  },
-  "devDependencies": {
-    "grunt": "^0.4.5"
   }
 }
