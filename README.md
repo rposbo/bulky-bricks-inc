@@ -1,5 +1,8 @@
 # Bulky Bricks Inc. [![Build Status](https://travis-ci.org/deanhume/bulky-bricks-inc.svg?branch=master)](https://travis-ci.org/deanhume/bulky-bricks-inc)
-Bulky Bricks is a demo website that is used by @rposbo and @deanohume to showcase automating web performance using modern tools.
+Bulky Bricks is a demo website that is used by [@rposbo](https://twitter.com/rposbo) and [@deanohume](https://twitter.com/deanohume) to showcase automating web performance using modern tools.
+
+The [before](http://rposbo.github.io/bulky-bricks-inc/before/index.html) and [after](http://rposbo.github.io/bulky-bricks-inc/after/index.html) versions of the Bulky Bricks website highlights how good web performance practices can really improve web page load times.
+
 
 # References
 
