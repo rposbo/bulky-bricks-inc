@@ -4,7 +4,9 @@
     "grunt-cli": "*",
     "grunt-contrib-cssmin": "*",
     "grunt-svgmin": "*",
-    "grunt-perfbudget": "*"
+    "grunt-pagespeed": "*"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5"
   }
 }
-  
