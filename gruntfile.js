@@ -56,38 +56,38 @@ module.exports = function(grunt) {
 		  target: {
 		    files: [{
 		      expand: true,
-		      cwd: 'scripts',
+		      cwd: 'after/scripts',
 		      src: ['*.js', '!*.min.js'],
-		      dest: 'scripts',
+		      dest: 'after/scripts',
 		      ext: '.min.js'
 		    }]
 		  }
-		},
+		}//,
 		// Minify the HTML
-		htmlmin: {                                   
-		    build: {                                      
-		        options: {                                 
-		            removeComments: true,
-		            collapseWhitespace: true,
-		            conservativeCollapse: true,
-		            collapseBooleanAttributes: true,
-		            removeAttributeQuotes: true,
-		            removeRedundantAttributes: true,
-		            keepClosingSlash: true,
-		            minifyJS: true,
-		            minifyCSS: true
-		        },
-		        files: [
-		            {
-		                expand: true,
-		                cwd: '',
-		                src: ['*.html'],
-		                dest: '',
-		                ext: '.min.html'
-		            }
-		        ]
-		    }
-		}
+		// htmlmin: {                                   
+		//     build: {                                      
+		//         options: {                                 
+		//             removeComments: true,
+		//             collapseWhitespace: true,
+		//             conservativeCollapse: true,
+		//             collapseBooleanAttributes: true,
+		//             removeAttributeQuotes: true,
+		//             removeRedundantAttributes: true,
+		//             keepClosingSlash: true,
+		//             minifyJS: true,
+		//             minifyCSS: true
+		//         },
+		//         files: [
+		//             {
+		//                 expand: true,
+		//                 cwd: '',
+		//                 src: ['after/*.html'],
+		//                 dest: '',
+		//                 ext: '.min.html'
+		//             }
+		//         ]
+		//     }
+		// }
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -95,8 +95,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-svgmin');
 	grunt.loadNpmTasks('grunt-pagespeed');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-htmlmin');
+	//grunt.loadNpmTasks('grunt-htmlmin');
 
-	grunt.registerTask('default', ['pagespeed', 'uglify','htmlmin', 'cssmin', 'svgmin', 'imagemin']);
+	grunt.registerTask('default', ['pagespeed', 'uglify', 'cssmin', 'svgmin', 'imagemin']);
 
 };
