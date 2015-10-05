@@ -37,35 +37,21 @@ module.exports = function(grunt) {
   		}
   	}
   },
-  pagespeed: {
-  	options: {
-  		nokey: true,
-  		url: "https://developers.google.com"
-  	},
-  	prod: {
+  perfbudget: {
+  	default: {
   		options: {
-  			url: "http://rposbo.github.io/bulky-bricks-inc/after/index.html",
-  			locale: "en_GB",
-  			strategy: "desktop",
-  			threshold: 80
+  			url: 'http://google.com',
+  			key: 'AIzaSyDA3hMmqJaXRcnnZ83vRBV7K5eLTUWwuoA'
   		}
-  	},
-  	// paths: {
-  	// 	options: {
-  	// 		paths: ["/speed/docs/insights/v1/getting_started", "/speed/docs/about"],
-  	// 		locale: "en_GB",
-  	// 		strategy: "desktop",
-  	// 		threshold: 80
-  	// 	}
-  	// }
+  	}
   }
 });
 
-grunt.loadNpmTasks('grunt-contrib-cssmin');
-grunt.loadNpmTasks('grunt-contrib-imagemin');
-grunt.loadNpmTasks('grunt-svgmin');
-grunt.loadNpmTasks('grunt-pagespeed');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.loadNpmTasks('grunt-svgmin');
+	grunt.loadNpmTasks('grunt-perfbudget');
 
-grunt.registerTask('default', ['cssmin', 'svgmin', 'pagespeed']);
+	grunt.registerTask('default', ['cssmin', 'svgmin', 'perfbudget']);
 
 };
