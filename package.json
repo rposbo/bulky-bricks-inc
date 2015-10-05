@@ -4,6 +4,6 @@
     "grunt-cli": "*",
     "grunt-contrib-cssmin": "*",
     "grunt-svgmin": "*",
-    "grunt-perfbudget": "*"
+    "grunt-pagespeed": "*"
   }
 }
