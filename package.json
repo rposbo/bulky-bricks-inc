@@ -5,6 +5,8 @@
     "grunt-contrib-cssmin": "*",
     "grunt-svgmin": "*",
     "grunt-pagespeed": "*",
-    "grunt-contrib-imagemin": "*"
+    "grunt-contrib-imagemin": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-htmlmin": "*"
   }
 }

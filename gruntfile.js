@@ -50,6 +50,43 @@ module.exports = function(grunt) {
 					threshold: 60
 				}
 			}
+		},
+		// Minify the JavaScript
+		uglify: {
+		  target: {
+		    files: [{
+		      expand: true,
+		      cwd: 'scripts',
+		      src: ['*.js', '!*.min.js'],
+		      dest: 'scripts',
+		      ext: '.min.js'
+		    }]
+		  }
+		},
+		// Minify the HTML
+		htmlmin: {                                   
+		    build: {                                      
+		        options: {                                 
+		            removeComments: true,
+		            collapseWhitespace: true,
+		            conservativeCollapse: true,
+		            collapseBooleanAttributes: true,
+		            removeAttributeQuotes: true,
+		            removeRedundantAttributes: true,
+		            keepClosingSlash: true,
+		            minifyJS: true,
+		            minifyCSS: true
+		        },
+		        files: [
+		            {
+		                expand: true,
+		                cwd: '',
+		                src: ['*.html'],
+		                dest: '',
+		                ext: '.min.html'
+		            }
+		        ]
+		    }
 		}
 	});
 
@@ -57,7 +94,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-svgmin');
 	grunt.loadNpmTasks('grunt-pagespeed');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-htmlmin');
 
-	grunt.registerTask('default', ['pagespeed', 'cssmin', 'svgmin', 'imagemin']);
+	grunt.registerTask('default', ['pagespeed', 'uglify','htmlmin', 'cssmin', 'svgmin', 'imagemin']);
 
 };
