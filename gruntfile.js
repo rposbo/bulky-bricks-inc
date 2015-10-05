@@ -1,4 +1,9 @@
+var timer = require("grunt-timer");
+
 module.exports = function(grunt) {
+timer.init(grunt);
+
+var imageminMozjpeg = require('imagemin-mozjpeg');
 
 	grunt.initConfig({
 		// Minify the CSS
@@ -10,16 +15,19 @@ module.exports = function(grunt) {
 			}
 		},
 		// Image minification
-		// imagemin: {
-		//   dynamic: {
-		//     files: [{
-		//       expand: true,
-		//       cwd: 'after/images/',
-		//       src: ['**/*.{png,jpg,gif}'],
-		//       dest: 'after/images/dist/'
-		//     }]
-		//   }
-		// },
+	   imagemin: {                          
+	     dynamic: {                                        
+	         options: {
+	           use: [imageminMozjpeg( {quality:80, quantTable: 3} )]
+	         },         
+	       files: [{
+	         expand: true,                 
+	         cwd: 'after/images/',                  
+	         src: ['*.{png,jpg,gif}'],   
+	         dest: 'after/images/dist/'                  
+	       }]
+	     }
+	   },
 		// Minify SVG
 		svgmin: {
 			options: {
@@ -53,7 +61,7 @@ module.exports = function(grunt) {
 		},
 		// Minify the JavaScript
 		uglify: {
-		  target: {
+		  dist: {
 		    files: [{
 		      expand: true,
 		      cwd: 'after/scripts',
@@ -83,35 +91,32 @@ module.exports = function(grunt) {
 		        'after/processed-index.html': ['after/index.html']
 		      }
 		    }
-		  }
-
-
-
+		  },
 		// Minify the HTML
-		// htmlmin: {                                   
-		//     build: {                                      
-		//         options: {                                 
-		//             removeComments: true,
-		//             collapseWhitespace: true,
-		//             conservativeCollapse: true,
-		//             collapseBooleanAttributes: true,
-		//             removeAttributeQuotes: true,
-		//             removeRedundantAttributes: true,
-		//             keepClosingSlash: true,
-		//             minifyJS: true,
-		//             minifyCSS: true
-		//         },
-		//         files: [
-		//             {
-		//                 expand: true,
-		//                 cwd: '',
-		//                 src: ['after/*.html'],
-		//                 dest: '',
-		//                 ext: '.min.html'
-		//             }
-		//         ]
-		//     }
-		// }
+		htmlmin: {                                   
+		    dist: {                                      
+		        options: {                                 
+		            removeComments: true,
+		            collapseWhitespace: true,
+		            conservativeCollapse: true,
+		            collapseBooleanAttributes: true,
+		            removeAttributeQuotes: true,
+		            removeRedundantAttributes: true,
+		            keepClosingSlash: true,
+		            minifyJS: true,
+		            minifyCSS: true
+		        },
+		        files: [
+		            {
+		                expand: true,
+		                cwd: 'after/',
+		                src: ['*.html'],
+		                dest: 'after/html/',
+		                ext: '.html'
+		            }
+		        ]
+		    }
+		}
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -120,10 +125,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-pagespeed');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-uncss');
-	//grunt.loadNpmTasks('grunt-htmlmin');
+	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-processhtml');
 
-	grunt.registerTask('default', ['pagespeed', 'uglify', 'cssmin', 'svgmin', 'uncss', 'processhtml']);
-
+	grunt.registerTask('default', ['pagespeed', 'imagemin', 'uglify', 'cssmin', 'svgmin', 'uncss', 'processhtml', 'htmlmin']);
 };
 

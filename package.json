@@ -1,15 +1,19 @@
 {
   "dependencies": {
     "grunt": "*",
-    "grunt-contrib-cssmin": "*",
-    "grunt-svgmin": "*",
-    "grunt-pagespeed": "*",
-    "grunt-contrib-uglify": "*",
-    "grunt-contrib-imagemin": "^0.9.4",
-    "grunt-htmlmin": "*",
     "grunt-cli": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-imagemin": "^0.9.4",
+    "grunt-contrib-uglify": "*",
+    "grunt-htmlmin": "*",
+    "grunt-pagespeed": "*",
+    "grunt-processhtml": "*",
+    "grunt-svgmin": "*",
     "grunt-uncss": "*",
-    "grunt-processhtml": "*"
+    "imagemin-mozjpeg": "^5.1.0"
+  },
+  "devDependencies": {
+    "grunt-htmlmin": "^0.1.4",
+    "grunt-timer": "^0.6.0"
   }
 }
-
