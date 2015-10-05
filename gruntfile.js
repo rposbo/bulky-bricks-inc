@@ -10,16 +10,16 @@ module.exports = function(grunt) {
 			}
 		},
 		// Image minification
-		imagemin: {
-		  dynamic: {
-		    files: [{
-		      expand: true,
-		      cwd: 'after/images/',
-		      src: ['**/*.{png,jpg,gif}'],
-		      dest: 'after/images/dist/'
-		    }]
-		  }
-		},
+		// imagemin: {
+		//   dynamic: {
+		//     files: [{
+		//       expand: true,
+		//       cwd: 'after/images/',
+		//       src: ['**/*.{png,jpg,gif}'],
+		//       dest: 'after/images/dist/'
+		//     }]
+		//   }
+		// },
 		// Minify SVG
 		svgmin: {
 			options: {
@@ -62,7 +62,31 @@ module.exports = function(grunt) {
 		      ext: '.min.js'
 		    }]
 		  }
-		}//,
+		},
+		// Removed any unused CSS
+		uncss: {
+		  dist: {
+		    files: {
+		      'after/css/index.css': ['after/index.html']
+		    }
+		  }
+		},
+		// Rewrite any CSS links to the new clean CSS
+		 processhtml: {
+		    options: {
+		      data: {
+		        //message: 'Hello world!'
+		      }
+		    },
+		    dist: {
+		      files: {
+		        'after/processed-index.html': ['after/index.html']
+		      }
+		    }
+		  }
+
+
+
 		// Minify the HTML
 		// htmlmin: {                                   
 		//     build: {                                      
@@ -95,8 +119,11 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-svgmin');
 	grunt.loadNpmTasks('grunt-pagespeed');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-uncss');
 	//grunt.loadNpmTasks('grunt-htmlmin');
+	grunt.loadNpmTasks('grunt-processhtml');
 
-	grunt.registerTask('default', ['pagespeed', 'uglify', 'cssmin', 'svgmin', 'imagemin']);
+	grunt.registerTask('default', ['pagespeed', 'uglify', 'cssmin', 'svgmin', 'uncss', 'processhtml']);
 
 };
+

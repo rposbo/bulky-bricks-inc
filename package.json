@@ -5,9 +5,11 @@
     "grunt-svgmin": "*",
     "grunt-pagespeed": "*",
     "grunt-contrib-uglify": "*",
-     "grunt-contrib-imagemin": "^0.9.4"
+    "grunt-contrib-imagemin": "^0.9.4",
     "grunt-htmlmin": "*",
-    "grunt-cli": "*"
+    "grunt-cli": "*",
+    "grunt-uncss": "*",
+    "grunt-processhtml": "*"
   }
 }
 
