@@ -1,9 +1,15 @@
 {
   "dependencies": {
     "grunt": "*",
-    "grunt-cli": "*",
     "grunt-contrib-cssmin": "*",
     "grunt-svgmin": "*",
-    "grunt-pagespeed": "*"
+    "grunt-pagespeed": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-imagemin": "^0.9.4",
+    "grunt-htmlmin": "*",
+    "grunt-cli": "*",
+    "grunt-uncss": "*",
+    "grunt-processhtml": "*"
   }
 }
+
