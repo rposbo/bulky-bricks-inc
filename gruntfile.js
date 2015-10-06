@@ -22,9 +22,9 @@ module.exports = function(grunt) {
 				},         
 				files: [{
 					expand: true,                 
-					cwd: 'after/images/',                  
+					cwd: 'before/images/',                  
 					src: ['*.{png,jpg,gif}'],   
-					dest: 'after/images/dist/'                  
+					dest: 'after/images/'                  
 				}]
 			}
 		},
@@ -41,7 +41,7 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				files: {
-					'after/images/dist/logo.svg': 'after/images/logo.svg'
+					'after/images/logo.svg': 'before/images/logo.svg'
 				}
 			}
 		},
@@ -64,11 +64,47 @@ module.exports = function(grunt) {
 			dist: {
 				files: [{
 					expand: true,
-					cwd: 'after/scripts',
+					cwd: 'before/scripts',
 					src: ['*.js', '!*.min.js'],
 					dest: 'after/scripts',
 					ext: '.min.js'
 				}]
+			}
+		},
+		// Rewrite the minifed CSS into the process HTML file
+		processhtml: {
+			dist: {
+				files: [{
+					expand: true,
+					cwd: 'before',
+					src: ['*.html'],
+					dest: 'after',
+					ext: '.html'
+				}]
+			}
+		},
+		// Extract the critical CSS
+		critical: {
+			dist: {
+				options: {
+					base: './after',
+					minify: true,
+					dimensions: [{
+						width: 1300,
+						height: 900
+					},
+					{
+						width: 500,
+						height: 900
+					}]
+				},
+				files: {
+					 ['after/index.html']: ['after/index.html'],
+					 ['after/about.html']: ['after/about.html'],
+					 ['after/contact.html']: ['after/contact.html'],
+					 ['after/product.html']: ['after/product.html'],
+					 ['after/products.html']: ['after/products.html']
+				}
 			}
 		},
 		// Minify the HTML
@@ -90,7 +126,7 @@ module.exports = function(grunt) {
 					expand: true,
 					cwd: 'after/',
 					src: ['*.html'],
-					dest: 'after/html/',
+					dest: 'after/',
 					ext: '.html'
 				}
 				]
@@ -104,8 +140,9 @@ grunt.loadNpmTasks('grunt-svgmin');
 grunt.loadNpmTasks('grunt-pagespeed');
 grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-contrib-htmlmin');
+grunt.loadNpmTasks('grunt-critical');
 grunt.loadNpmTasks('grunt-processhtml');
 
-grunt.registerTask('default', ['pagespeed', 'imagemin', 'uglify', 'cssmin', 'svgmin', 'processhtml', 'htmlmin']);
+grunt.registerTask('default', ['pagespeed', 'uglify', 'cssmin', 'svgmin', 'processhtml', 'critical', 'htmlmin']);
 };
 

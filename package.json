@@ -9,10 +9,12 @@
     "grunt-pagespeed": "*",
     "grunt-processhtml": "*",
     "grunt-svgmin": "*",
-    "imagemin-mozjpeg": "^5.1.0"
+    "imagemin-mozjpeg": "^5.1.0",
+    "grunt-critical-css": "*"
   },
   "devDependencies": {
     "grunt-contrib-htmlmin": "^0.5.0",
+    "grunt-critical": "^0.1.7",
     "grunt-timer": "^0.6.0"
   }
 }
