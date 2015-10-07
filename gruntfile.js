@@ -28,6 +28,71 @@ module.exports = function(grunt) {
 				}]
 			}
 		},
+		// convert png to webp
+		webp:{
+			png: {
+				files:[{
+					expand: true,
+					cwd: "after/images/",
+					src: "*.png",
+					dest: "after/images/dist/"
+				}],
+		      options: {
+        		binpath: "after/cwebp.exe",
+		        preset: 'picture',
+		        verbose: true,
+		        quality: 80,
+		        alphaQuality: 80,
+		        compressionMethod: 6,
+		        segments: 4,
+		        psnr: 42,
+		        sns: 50,
+		        filterStrength: 40,
+		        filterSharpness: 3,
+		        simpleFilter: true,
+		        partitionLimit: 50,
+		        analysisPass: 6,
+		        multiThreading: true,
+		        lowMemory: false,
+		        alphaMethod: 0,
+		        alphaFilter: 'best',
+		        alphaCleanup: true,
+		        noAlpha: false,
+		        lossless: false
+		      }
+			},
+			jpeg: {
+				files:[{
+					expand: true,
+					cwd: "after/images/",
+					src: "*.jpg",
+					dest: "after/images/dist/"
+				}],
+		      options: {
+        		binpath: "after/cwebp.exe",
+		        preset: 'photo',
+		        verbose: true,
+		        quality: 80,
+		        alphaQuality: 80,
+		        compressionMethod: 6,
+		        segments: 4,
+		        psnr: 42,
+		        sns: 50,
+		        filterStrength: 40,
+		        filterSharpness: 3,
+		        simpleFilter: true,
+		        partitionLimit: 50,
+		        analysisPass: 6,
+		        multiThreading: true,
+		        lowMemory: false,
+		        alphaMethod: 0,
+		        alphaFilter: 'best',
+		        alphaCleanup: false,
+		        noAlpha: true,
+		        lossless: false
+		      }
+			}
+		},
 		// Minify SVG
 		svgmin: {
 			options: {
@@ -99,11 +164,11 @@ module.exports = function(grunt) {
 					}]
 				},
 				files: {
-					 ['after/index.html']: ['after/index.html'],
-					 ['after/about.html']: ['after/about.html'],
-					 ['after/contact.html']: ['after/contact.html'],
-					 ['after/product.html']: ['after/product.html'],
-					 ['after/products.html']: ['after/products.html']
+					 'after/index.html': ['after/index.html'],
+					 'after/about.html': ['after/about.html'],
+					 'after/contact.html': ['after/contact.html'],
+					 'after/product.html': ['after/product.html'],
+					 'after/products.html': ['after/products.html']
 				}
 			}
 		},
@@ -137,6 +202,7 @@ module.exports = function(grunt) {
 grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-contrib-imagemin');
 grunt.loadNpmTasks('grunt-svgmin');
+grunt.loadNpmTasks('grunt-webp');
 grunt.loadNpmTasks('grunt-pagespeed');
 grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-contrib-htmlmin');
@@ -144,5 +210,6 @@ grunt.loadNpmTasks('grunt-critical');
 grunt.loadNpmTasks('grunt-processhtml');
 
 grunt.registerTask('default', ['pagespeed', 'uglify', 'cssmin', 'svgmin', 'processhtml', 'critical', 'htmlmin']);
+grunt.registerTask('rposbo', ['webp:jpeg', 'webp:png']);
 };
 
