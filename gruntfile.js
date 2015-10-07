@@ -209,7 +209,6 @@ grunt.loadNpmTasks('grunt-contrib-htmlmin');
 grunt.loadNpmTasks('grunt-critical');
 grunt.loadNpmTasks('grunt-processhtml');
 
-grunt.registerTask('default', ['pagespeed', 'uglify', 'cssmin', 'svgmin', 'processhtml', 'critical', 'htmlmin']);
-grunt.registerTask('rposbo', ['webp:jpeg', 'webp:png']);
+grunt.registerTask('default', ['pagespeed', 'uglify', 'cssmin', 'svgmin','webp:jpeg', 'webp:png', 'processhtml', 'critical', 'htmlmin']);
 };
 
