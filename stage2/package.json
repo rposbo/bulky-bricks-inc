@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "grunt": "*",
+    "grunt-cli": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-imagemin": "^0.9.4",
+    "grunt-pagespeed": "*",
+    "grunt-processhtml": "*",
+    "imagemin-mozjpeg": "^5.1.0",
+    "grunt-critical-css": "*"
+  },
+  "devDependencies": {
+    "grunt-critical": "^0.1.7",
+    "grunt-timer": "^0.6.0",
+    "grunt-webp": "0.0.4"
+  }
+}

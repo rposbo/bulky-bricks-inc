@@ -18,33 +18,34 @@ module.exports = function(grunt) {
 		imagemin: {                          
 			dynamic: {                                        
 				options: {
-					use: [imageminMozjpeg( {quality:80, quantTable: 3} )]
+					use: [imageminMozjpeg( {quality:80, quantTable: 3} )],
+					svgoPlugins: [{ removeViewBox: true, removeUselessStrokeAndFill: true }],
 				},         
 				files: [{
 					expand: true,                 
 					cwd: 'before/images/',                  
-					src: ['*.{png,jpg,gif}'],   
+					src: ['*.{png,jpg,gif,svg}'],   
 					dest: 'after/images/'                  
 				}]
 			}
 		},
-		// Minify SVG
-		svgmin: {
-			options: {
-				plugins: [
-				{
-					removeViewBox: true
-				}, {
-					removeUselessStrokeAndFill: true
-				}
-				]
-			},
-			dist: {
-				files: {
-					'after/images/logo.svg': 'before/images/logo.svg'
-				}
-			}
-		},
+		// // Minify SVG
+		// svgmin: {
+		// 	options: {
+		// 		plugins: [
+		// 		{
+		// 			removeViewBox: true
+		// 		}, {
+		// 			removeUselessStrokeAndFill: true
+		// 		}
+		// 		]
+		// 	},
+		// 	dist: {
+		// 		files: {
+		// 			'after/images/logo.svg': 'before/images/logo.svg'
+		// 		}
+		// 	}
+		// },
 		pagespeed: {
 			options: {
 				nokey: true,
@@ -136,13 +137,15 @@ module.exports = function(grunt) {
 
 grunt.loadNpmTasks('grunt-contrib-cssmin');
 grunt.loadNpmTasks('grunt-contrib-imagemin');
-grunt.loadNpmTasks('grunt-svgmin');
+// grunt.loadNpmTasks('grunt-svgmin');
+grunt.loadNpmTasks('grunt-webp');
 grunt.loadNpmTasks('grunt-pagespeed');
 grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-contrib-htmlmin');
 grunt.loadNpmTasks('grunt-critical');
 grunt.loadNpmTasks('grunt-processhtml');
 
-grunt.registerTask('default', ['pagespeed', 'uglify', 'cssmin', 'svgmin', 'processhtml', 'critical', 'htmlmin']);
-};
+grunt.registerTask('test', ['pagespeed']);
+grunt.registerTask('default', ['uglify', 'cssmin', 'imagemin','webp:jpeg', 'webp:png', 'processhtml', 'critical', 'htmlmin']);
 
+};
