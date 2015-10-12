@@ -31,9 +31,9 @@ module.exports = function(grunt) {
 					dest: "images/webp/"
 				}],
 		      options: {
-        		binpath: "after/cwebp.exe",
+        		binpath: "../after/cwebp.exe",
 		        preset: 'picture',
-		        verbose: true,
+		        verbose: false,
 		        quality: 80,
 		        alphaQuality: 80,
 		        compressionMethod: 6,
@@ -62,9 +62,9 @@ module.exports = function(grunt) {
 					dest: "images/webp/"
 				}],
 		      options: {
-        		binpath: "after/cwebp.exe",
+        		binpath: "../after/cwebp.exe",
 		        preset: 'photo',
-		        verbose: true,
+		        verbose: false,
 		        quality: 80,
 		        alphaQuality: 80,
 		        compressionMethod: 6,
@@ -97,7 +97,7 @@ module.exports = function(grunt) {
 		critical: {
 			dist: {
 				options: {
-					base: './stage2',
+					base: './',
 					minify: true,
 					dimensions: [{
 						width: 1300,
@@ -109,11 +109,11 @@ module.exports = function(grunt) {
 					}]
 				},
 				files: {
-					 'stage2/index.html': ['stage2/index.html'],
-					 'stage2/about.html': ['stage2/about.html'],
-					 'stage2/contact.html': ['stage2/contact.html'],
-					 'stage2/product.html': ['stage2/product.html'],
-					 'stage2/products.html': ['stage2/products.html']
+					 'index.html': ['index.html'],
+					 'about.html': ['about.html'],
+					 'contact.html': ['contact.html'],
+					 'product.html': ['product.html'],
+					 'products.html': ['products.html']
 				}
 			}
 		},
@@ -122,9 +122,9 @@ module.exports = function(grunt) {
 			dist: {
 				files: [{
 					expand: true,
-					cwd: './stage2',
+					cwd: './',
 					src: ['*.html'],
-					dest: './stage2',
+					dest: './',
 					ext: '.html'
 				}]
 			}
@@ -154,5 +154,6 @@ grunt.loadNpmTasks('grunt-processhtml');
 
 grunt.registerTask('test', ['pagespeed']);
 grunt.registerTask('default', ['cssmin', 'imagemin','webp:jpeg', 'webp:png', 'processhtml', 'critical']);
+grunt.registerTask('patch', ['cssmin', 'processhtml', 'critical']);
 
 };
