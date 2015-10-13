@@ -129,6 +129,31 @@ module.exports = function(grunt) {
 				}]
 			}
 		},
+		// Minify the HTML
+		htmlmin: {                                   
+			dist: {                                      
+				options: {                                 
+					removeComments: true,
+					collapseWhitespace: true,
+					conservativeCollapse: true,
+					collapseBooleanAttributes: true,
+					removeAttributeQuotes: true,
+					removeRedundantAttributes: true,
+					keepClosingSlash: true,
+					minifyJS: true,
+					minifyCSS: true
+				},
+				files: [
+				{
+					expand: true,
+					cwd: './',
+					src: ['*.html'],
+					dest: './',
+					ext: '.html'
+				}
+				]
+			}
+		},
 		// Rewrite the minifed stuff into the processed HTML file
 		processhtml: {
 			dist: {
@@ -164,8 +189,10 @@ grunt.loadNpmTasks('grunt-pagespeed');
 grunt.loadNpmTasks('grunt-critical');
 grunt.loadNpmTasks('grunt-processhtml');
 grunt.loadNpmTasks('grunt-contrib-uglify');
+grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
 grunt.registerTask('test', ['pagespeed']);
-grunt.registerTask('default', ['cssmin', 'imagemin','webp:jpeg', 'webp:png', 'uglify', 'processhtml', 'critical']);
+//grunt.registerTask('default', ['cssmin', 'imagemin','webp:jpeg', 'webp:png', 'uglify', 'processhtml', 'critical', 'htmlmin']);
+grunt.registerTask('default', ['cssmin', 'uglify', 'processhtml', 'critical', 'htmlmin']);
 
 };
