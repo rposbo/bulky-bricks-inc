@@ -117,7 +117,44 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		// Rewrite the minifed CSS into the process HTML file
+		// Stage 3 -  Minify the JavaScript
+		uglify: {
+			dist: {
+				files: [{
+					expand: true,
+					cwd: '../before/scripts',
+					src: ['*.js', '!*.min.js'],
+					dest: 'scripts',
+					ext: '.min.js'
+				}]
+			}
+		},
+		// Minify the HTML
+		htmlmin: {                                   
+			dist: {                                      
+				options: {                                 
+					removeComments: true,
+					collapseWhitespace: true,
+					conservativeCollapse: true,
+					collapseBooleanAttributes: true,
+					removeAttributeQuotes: true,
+					removeRedundantAttributes: true,
+					keepClosingSlash: true,
+					minifyJS: true,
+					minifyCSS: true
+				},
+				files: [
+				{
+					expand: true,
+					cwd: './',
+					src: ['*.html'],
+					dest: './',
+					ext: '.html'
+				}
+				]
+			}
+		},
+		// Rewrite the minifed stuff into the processed HTML file
 		processhtml: {
 			dist: {
 				files: [{
@@ -136,7 +173,7 @@ module.exports = function(grunt) {
 			},
 			prod: {
 				options: {
-					url: "http://rposbo.github.io/bulky-bricks-inc/stage2/index.html",
+					url: "http://rposbo.github.io/bulky-bricks-inc/stage3/index.html",
 					locale: "en_GB",
 					strategy: "desktop",
 					threshold: 60
@@ -151,8 +188,11 @@ grunt.loadNpmTasks('grunt-webp');
 grunt.loadNpmTasks('grunt-pagespeed');
 grunt.loadNpmTasks('grunt-critical');
 grunt.loadNpmTasks('grunt-processhtml');
+grunt.loadNpmTasks('grunt-contrib-uglify');
+grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
 grunt.registerTask('test', ['pagespeed']);
-grunt.registerTask('default', ['cssmin', 'imagemin','webp:jpeg', 'webp:png', 'processhtml', 'critical']);
+//grunt.registerTask('default', ['cssmin', 'imagemin','webp:jpeg', 'webp:png', 'uglify', 'processhtml', 'critical', 'htmlmin']);
+grunt.registerTask('default', ['cssmin', 'uglify', 'processhtml', 'critical', 'htmlmin']);
 
 };
