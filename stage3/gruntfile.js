@@ -166,7 +166,6 @@ grunt.loadNpmTasks('grunt-processhtml');
 grunt.loadNpmTasks('grunt-contrib-uglify');
 
 grunt.registerTask('test', ['pagespeed']);
-grunt.registerTask('default', ['cssmin', 'uglify', 'processhtml', 'critical']);
-//grunt.registerTask('default', ['cssmin', 'imagemin','webp:jpeg', 'webp:png', 'uglify', 'processhtml', 'critical']);
+grunt.registerTask('default', ['cssmin', 'imagemin','webp:jpeg', 'webp:png', 'uglify', 'processhtml', 'critical']);
 
 };
