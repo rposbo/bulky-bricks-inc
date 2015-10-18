@@ -3,4 +3,9 @@ node_js:
   - "0.12"
 before_install: npm install -g grunt-cli
 install: npm install
-before_script: grunt test
+env:
+ - TEST_DIR=stage1
+ - TEST_DIR=stage2
+ - TEST_DIR=stage3
+ - TEST_DIR=after
+script: cd $TEST_DIR && grunt test
