@@ -84,23 +84,25 @@ module.exports = function(grunt) {
 			}
 		},
 		responsive_images: {
-	    images: {
-	      options: {
+		  images: {
+		    options: {
 					engine: 'im',
-	        sizes: [
+		      sizes: [
 						{
-	          name: 'medium',
-	          width: 300
-	        },{
-	          name: 'large',
-	          width: 500,
-	        }]
-	      },
+		        name: 'medium',
+		        width: 300,
+						quality: 90,
+						upscale: false
+		      },{
+		        name: 'large',
+		        width: 500,
+		      }]
+		    },
 				files: {
-        'images/tie-fighter.jpg': '../before/images/tie-fighter-large.jpg'
-      	}
-	    }
-	  },
+		    'images/tie-fighter.jpg': '../before/images/tie-fighter-large.jpg'
+		  	}
+		  }
+		},
 		pagespeed: {
 			options: {
 				nokey: true,
@@ -123,5 +125,5 @@ grunt.loadNpmTasks('grunt-responsive-images');
 grunt.loadNpmTasks('grunt-pagespeed');
 
 grunt.registerTask('test', ['pagespeed']);
-grunt.registerTask('default', ['imagemin','webp:jpeg', 'webp:png', 'responsive_images']);
+grunt.registerTask('default', ['responsive_images']);
 };
