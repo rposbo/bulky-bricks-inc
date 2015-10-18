@@ -5,7 +5,8 @@
     "grunt-contrib-imagemin": "^0.9.4",
     "grunt-pagespeed": "*",
     "imagemin-mozjpeg": "^5.1.0",
-    "grunt-webp": "0.0.4"
+    "grunt-webp": "0.0.4",
+    "grunt-responsive-images": "*"
   },
   "devDependencies": {
     "grunt-timer": "^0.6.0"
