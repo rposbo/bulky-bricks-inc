@@ -1,11 +1,11 @@
 language: node_js
 node_js:
   - "0.12"
-before_install: npm install -g grunt-cli
-install: npm install
 env:
  - TEST_DIR=stage1
  - TEST_DIR=stage2
  - TEST_DIR=stage3
  - TEST_DIR=after
+before_install: cd $TEST_DIR && npm install -g grunt-cli
+install: cd $TEST_DIR && npm install
 script: cd $TEST_DIR && grunt test
