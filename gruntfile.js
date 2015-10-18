@@ -210,5 +210,6 @@ grunt.loadNpmTasks('grunt-critical');
 grunt.loadNpmTasks('grunt-processhtml');
 
 grunt.registerTask('default', ['pagespeed', 'uglify', 'cssmin', 'svgmin','webp:jpeg', 'webp:png', 'processhtml', 'critical', 'htmlmin']);
+grunt.registerTask('test', ['pagespeed']);
 };
 
