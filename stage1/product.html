@@ -47,8 +47,14 @@
           <!-- Second cell -->
           <div class="mdl-cell mdl-cell--5-col">
             <h2>Star Wars TIE Fighter</h2>
-            <!-- image-->
-            <div class="mdl-card mdl-shadow--2dp demo-card-wide product_tie_fighter"></div>
+            <!-- image
+            <div class="mdl-card mdl-shadow--2dp demo-card-wide product_tie_fighter"></div>-->
+            <picture>
+             <source media="(min-width: 1250px)" srcset="images/tie-fighter-large.jpg">
+             <source media="(min-width: 640px)" srcset="images/tie-fighter-medium.jpg">
+             <source srcset="images/tie-fighter-medium.jpg">
+             <img src="images/tie-fighter-large.jpg" alt="Tie fighter.">
+          </picture>
           </div>
           <!-- Third cell -->
           <div class="mdl-cell mdl-cell--5-col">
