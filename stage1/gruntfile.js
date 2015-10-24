@@ -96,6 +96,8 @@ module.exports = function(grunt) {
 		      },{
 		        name: 'large',
 		        width: 500,
+						quality: 90,
+						upscale: false
 		      }]
 		    },
 				files: {
@@ -125,5 +127,5 @@ grunt.loadNpmTasks('grunt-responsive-images');
 grunt.loadNpmTasks('grunt-pagespeed');
 
 grunt.registerTask('test', ['pagespeed']);
-grunt.registerTask('default', ['responsive_images']);
+grunt.registerTask('default', ['responsive_images', 'grunt-contrib-imagemin', 'grunt-webp']);
 };
