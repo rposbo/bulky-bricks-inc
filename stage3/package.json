@@ -3,11 +3,14 @@
     "grunt": "*",
     "grunt-cli": "*",
     "grunt-contrib-cssmin": "*",
+    "grunt-contrib-htmlmin": "^0.5.0",
     "grunt-contrib-imagemin": "^0.9.4",
+    "grunt-contrib-uglify": "^0.9.2",
+    "grunt-critical-css": "*",
     "grunt-pagespeed": "*",
     "grunt-processhtml": "*",
-    "imagemin-mozjpeg": "^5.1.0",
-    "grunt-critical-css": "*"
+    "grunt-responsive-images": "^0.1.7",
+    "imagemin-mozjpeg": "^5.1.0"
   },
   "devDependencies": {
     "grunt-critical": "^0.1.7",

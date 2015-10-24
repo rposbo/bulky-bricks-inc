@@ -7,17 +7,17 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 		// Stage 1 - Image minification
-		imagemin: {                          
-			dynamic: {                                        
+		imagemin: {
+			dynamic: {
 				options: {
 					use: [imageminMozjpeg( {quality:80, quantTable: 3} )],
 					svgoPlugins: [{ removeViewBox: true, removeUselessStrokeAndFill: true }],
-				},         
+				},
 				files: [{
-					expand: true,                 
-					cwd: '../before/images/',                  
-					src: ['*.{png,jpg,gif,svg}'],   
-					dest: 'images/'                  
+					expand: true,
+					cwd: '../before/images/',
+					src: ['*.{png,jpg,gif,svg}'],
+					dest: 'images/'
 				}]
 			}
 		},
@@ -86,10 +86,33 @@ module.exports = function(grunt) {
 		      }
 			}
 		},
+		// Responsive images
+		responsive_images: {
+			images: {
+				options: {
+					engine: 'im',
+					sizes: [
+						{
+						name: 'medium',
+						width: 300,
+						quality: 90,
+						upscale: false
+					},{
+						name: 'large',
+						width: 500,
+						quality: 90,
+						upscale: false
+					}]
+				},
+				files: {
+				'images/tie-fighter.jpg': '../before/images/tie-fighter-large.jpg'
+				}
+			}
+		},
 		// Stage 2 - Minify the CSS
 		cssmin: {
 			target: {
-				files: [{ 
+				files: [{
 					src: ['../before/css/material-design.css', '../before/css/site.css'], dest: 'css/result.min.css' }
 				]}
 		},
@@ -130,9 +153,9 @@ module.exports = function(grunt) {
 			}
 		},
 		// Minify the HTML
-		htmlmin: {                                   
-			dist: {                                      
-				options: {                                 
+		htmlmin: {
+			dist: {
+				options: {
 					removeComments: true,
 					collapseWhitespace: true,
 					conservativeCollapse: true,
@@ -190,8 +213,9 @@ grunt.loadNpmTasks('grunt-critical');
 grunt.loadNpmTasks('grunt-processhtml');
 grunt.loadNpmTasks('grunt-contrib-uglify');
 grunt.loadNpmTasks('grunt-contrib-htmlmin');
+grunt.loadNpmTasks('grunt-responsive-images');
 
 grunt.registerTask('test', ['pagespeed']);
-grunt.registerTask('default', ['cssmin', 'imagemin','webp:jpeg', 'webp:png', 'uglify', 'processhtml', 'critical', 'htmlmin']);
+grunt.registerTask('default', ['cssmin', 'imagemin', 'responsive_images', 'uglify', 'processhtml', 'critical', 'htmlmin']);
 
 };
