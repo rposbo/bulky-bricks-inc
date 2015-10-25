@@ -5,7 +5,7 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		//Stage 1 - Image minification
 		imagemin: {
-			dynamic: {
+			dist: {
 				options: {
 					use: [imageminMozjpeg( {quality:80, quantTable: 3} )],
 					svgoPlugins: [{ removeViewBox: true, removeUselessStrokeAndFill: true }],
@@ -127,5 +127,5 @@ grunt.loadNpmTasks('grunt-responsive-images');
 grunt.loadNpmTasks('grunt-pagespeed');
 
 grunt.registerTask('test', ['pagespeed']);
-grunt.registerTask('default', ['responsive_images', 'grunt-contrib-imagemin', 'grunt-webp']);
+grunt.registerTask('default', ['responsive_images', 'imagemin', 'webp']);
 };
