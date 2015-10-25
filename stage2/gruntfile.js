@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		// Stage 1 - Image minification
 		imagemin: {                          
-			dynamic: {                                        
+			dist: {                                        
 				options: {
 					use: [imageminMozjpeg( {quality:80, quantTable: 3} )],
 					svgoPlugins: [{ removeViewBox: true, removeUselessStrokeAndFill: true }],
@@ -88,7 +88,7 @@ module.exports = function(grunt) {
 		},
 		// Stage 2 - Minify the CSS
 		cssmin: {
-			target: {
+			dist: {
 				files: [{ 
 					src: ['../before/css/material-design.css', '../before/css/site.css'], dest: 'css/result.min.css' }
 				]}
