@@ -10,15 +10,15 @@ The [before](http://rposbo.github.io/bulky-bricks-inc/before/index.html) and [af
 * [.Net on GitHub](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md), [ASP.Net on GitHub](https://github.com/aspnet)
 * [Mozilla 2.2 seconds](https://blog.mozilla.org/metrics/2010/04/05/firefox-page-load-speed-%E2%80%93-part-ii/)
 * [Material Design Lite](http://getmdl.io/started)
-* <whatdoesmysitecost.com>
-* <webpagetest.org>
-* <developers.google.com/speed/pagespeed/insights/>
+* [whatdoesmysitecost.com](http://whatdoesmysitecost.com)
+* [webpagetest.org](http://webpagetest.org)
+* [Page Speed Insights](developers.google.com/speed/pagespeed/insights/)
 * [Page Speed Insights from the command line](https://www.npmjs.com/package/psi)
-* <nodejs.org>
-* <npmjs.com>
+* [NodeJs](http://nodejs.org)
+* [npm](http://npmjs.com)
 * [mod_pagespeed](http://modpagespeed.com/)
 * [IISpeed](http://www.iis.net/downloads/community/2013/05/iispeed)
-* <httparchive.org>
+* [HttpArchive](http://httparchive.org)
 * [Akamai ION result](http://bit.ly/akamai-bulky)
 * [Akamai ION info](http://bit.ly/akamai-ion)
 * [Google Web Starter Kit](https://developers.google.com/web/tools/starter-kit/)
