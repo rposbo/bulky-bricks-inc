@@ -41,7 +41,7 @@ The [before](http://rposbo.github.io/bulky-bricks-inc/before/index.html) and [af
 
 * [Image Optimisation Info](http://imageoptimization.info)
 * [Azure Image and Text Optimisation](https://github.com/ligershark/AzureJobs)
-* <kraken.io>
+* [kraken.io](http://kraken.io)
 * [Azure Image Optimizer Site Extension](https://www.siteextensions.net/packages/AzureImageOptimizer/)
 * [AutoSmush](http://bit.ly/amazon-smush) - doesn't actually work any more, since SmushIt is gone!
 * [WebP exe](https://developers.google.com/speed/webp/download?hl=en)
@@ -52,9 +52,6 @@ The [before](http://rposbo.github.io/bulky-bricks-inc/before/index.html) and [af
 
 * [Critical CSS](http://www.smashingmagazine.com/2015/08/understanding-critical-css/)
 * [Azure Text Minifier Site Extension](https://github.com/ligershark/AzureJobs)
-
-
-
 
 
 ![Bulky Bricks Site](https://raw.githubusercontent.com/rposbo/bulky-bricks-inc/master/bulky-bricks-site.jpg "Bulky Bricks")
